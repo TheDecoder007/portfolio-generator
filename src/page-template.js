@@ -13,7 +13,7 @@ const generateAbout = aboutText => {
   `;
 };
 
-//function to handle generating project HTML data
+//function to handle generating projects section
 
   const generateProjects = projectsArr => {
     return `
@@ -59,7 +59,7 @@ const generateAbout = aboutText => {
     `;
   };
 
-
+//export function to generate entire page
 module.exports = templateData => {
   //destructure page data by section
   const { projects, about, ...header } = templateData;

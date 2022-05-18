@@ -66,15 +66,16 @@ return inquirer.prompt([
   
 //Function to run inquirer prompts for project questions
 const promptProject = portfolioData => {
-  //if theres no 'projects' array property, create one
-  //only happens on first pass, if it happened every time, 
-  //it would delete and replace previous project data
   console.log(`
   =============
   Add a New Project
   =============
   `);
   
+  
+  //if theres no 'projects' array property, create one
+  //only happens on first pass, if it happened every time, 
+  //it would delete and replace previous project data
   if (!portfolioData.projects) {
     portfolioData.projects = [];
   } 
