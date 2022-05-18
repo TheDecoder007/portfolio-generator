@@ -217,19 +217,7 @@ const promptProject = portfolioData => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//NOTES ON FOR LOOP
 // const printProfileData = profileDataArr => {
 //   // This...
 //   for (let i = 0; i < profileDataArr.length; i += 1) {
