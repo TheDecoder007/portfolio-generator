@@ -21,12 +21,29 @@ return inquirer.prompt([
       {
         type: 'input',
         name: 'name',
-        message: 'What is your name?',
+        message: 'What is your name? (Required)',
+  //validate that the user enters something
+        validate: nameInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log('Please enter your name!');
+            return false
+          }
+        }
       },
       {
         type: 'input',
         name: 'github',
-        message: 'Enter your Github Username'
+        message: 'Enter your Github Username (Required)',
+        validate: nameInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log('Please enter your Github Username!');
+            return false
+          }
+        }
       },
       {
         type: 'input',
@@ -55,7 +72,15 @@ const promptProject = portfolioData => {
     {
       type: 'input',
       name: 'name',
-      message: 'What is the name of your project?'
+      message: 'What is the name of your project? (Required)',
+      validate: nameInput => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log('Please enter your project name!');
+          return false
+        }
+      }
     },
     {
       type: 'input',
@@ -71,7 +96,15 @@ const promptProject = portfolioData => {
     {
       type: 'input',
       name: 'link',
-      message: 'Enter the GitHub link to your project. (Required)'
+      message: 'Enter the GitHub link to your project. (Required)',
+      validate: nameInput => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log('Please enter the GitHub link!');
+          return false
+        }
+      }
     },
     {
       type: 'confirm',
